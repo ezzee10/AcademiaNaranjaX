@@ -1,4 +1,4 @@
-/*Función que imprime la tabla del 5 hasta el 10*/
+/*Función que genera un archivo .txt con la tabla del 5 hasta el 10*/
 
 const crearArchivo = require("./crearArchivo");
 
@@ -9,8 +9,6 @@ const tabla_del_5 = async () => {
     for (let i = 1; i <= 10; i++) {
         resultado += `5 * ${i} = ${5 * i} \n`
     }
-
-    console.log(resultado);
 
     try {
         await crearArchivo('tabla-5.txt', resultado);

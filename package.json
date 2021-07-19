@@ -4,7 +4,10 @@
   "description": "Repositorio de la Academia de NaranjaX",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "base": "node app",
+    "dev": "nodemon app",
+    "ejercicio-4": "nodemon /01-fundamentos-node/Ejercicio4/app"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ezzee10/AcademiaNaranjaX/issues"
   },
-  "homepage": "https://github.com/ezzee10/AcademiaNaranjaX#readme"
+  "homepage": "https://github.com/ezzee10/AcademiaNaranjaX#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }

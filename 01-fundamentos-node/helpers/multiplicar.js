@@ -20,7 +20,7 @@ const crearArchivo = (numero = 5, imprimir = false) => {
 
             resultado_consola = colors.green(`*** Tabla del ${numero} *** \n \n`) + colors.red(resultado);
             
-            fs.writeFile(`tabla-${numero}.txt`, resultado, function(err) {
+            fs.writeFile(`salida/tabla-${numero}.txt`, resultado, function(err) {
                 if (err) reject(err);
                 else resolve(imprimir ? resultado_consola : `tabla-${numero}.txt creado correctamente`);
             });

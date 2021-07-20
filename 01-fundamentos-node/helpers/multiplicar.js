@@ -16,13 +16,13 @@ const crearArchivo = (numero = 5, imprimir = false) => {
 
             for (let i = 1; i <= 10; i++) {
                 resultado += `${numero} * ${i} = ${numero * i} \n`
-            }
+            }      
 
-            resultado = colors.green(`*** Tabla del ${numero} *** \n \n`) + colors.red(resultado);
+            resultado_consola = colors.green(`*** Tabla del ${numero} *** \n \n`) + colors.red(resultado);
             
             fs.writeFile(`tabla-${numero}.txt`, resultado, function(err) {
                 if (err) reject(err);
-                else resolve(imprimir ? resultado : `tabla-${numero}.txt creado correctamente`);
+                else resolve(imprimir ? resultado_consola : `tabla-${numero}.txt creado correctamente`);
             });
         }
     });

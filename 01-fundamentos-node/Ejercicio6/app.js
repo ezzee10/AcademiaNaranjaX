@@ -4,6 +4,6 @@ const yargs = require('yargs');
 let argv = yargs.argv;
 let numero = argv.base;
 
-const calcular_tabla_numerica = require("../Ejercicio1/app");
+const crearArchivo = require("../helpers/multiplicar");
 
-calcular_tabla_numerica(numero);
+crearArchivo(numero);

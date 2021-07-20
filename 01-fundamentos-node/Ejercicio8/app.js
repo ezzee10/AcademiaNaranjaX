@@ -8,7 +8,9 @@ const tabla_yargs = () => {
             .then(res => console.log(res))
             .catch(err => console.log(err));
     } else {
-        crearArchivo(yargs.base);
+        crearArchivo(yargs.base)
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
     }
 
 }

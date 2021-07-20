@@ -3,6 +3,7 @@
 const crearArchivo = (numero = 5, imprimir = false) => {
 
     let fs = require('fs');
+    let colors = require('colors');
 
     return new Promise((resolve, reject) => {
 
@@ -17,7 +18,7 @@ const crearArchivo = (numero = 5, imprimir = false) => {
                 resultado += `${numero} * ${i} = ${numero * i} \n`
             }
 
-            // console.log(resultado);
+            resultado = colors.green(`*** Tabla del ${numero} *** \n \n`) + colors.red(resultado);
             
             fs.writeFile(`tabla-${numero}.txt`, resultado, function(err) {
                 if (err) reject(err);
